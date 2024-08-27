@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jonathan_web_contact_us</title>
+	<script language="javascript">
+
+	function Validate() {
+	
+	var FLAG = 0;
+
+	if(document.myform.firstname.value == '') {
+	FLAG = 1;
+	fn.innerHTML = '<b>fist name is Empty</b>';
+	}
+
+	if(document.myform.lastname.value == '') {
+	FLAG = 1;
+	ln.innerHTML = '<b>last name is Empty</b>';
+	}
+
+	if(document.myform.gender.value == '') {
+	FLAG = 1;
+	gn.innerHTML = '<b>gender is not select</b>';
+	}
+
+	if(document.myform.address.value == '') {
+	FLAG = 1;
+	ad.innerHTML = '<b> adress is Empty</b>';
+	}
+
+	if(document.myform.city.value == '') {
+	FLAG = 1;
+	ct.innerHTML = '<b>City is Empty</b>';
+	}
+
+	if(document.myform.state.value == '') {
+	FLAG = 1;
+	s.innerHTML = '<b>State is Empty</b>';
+	}
+	if(document.myform.zip.value == '') {
+	FLAG = 1;
+	z.innerHTML='<b>Zip is Empty</b>';
+	}
+
+	if(myform.email.value == '') {
+	FLAG = 1;
+	em.innerHTML = '<b>Email is Emply</b>';
+	}
+	if(document.myform.phonenumber.value == '') {
+	FLAG = 1;
+	pn.innerHTML = '<b>Phone Number is Empty </b>';
+	}
+
+	if( FLAG ) {
+	return false;
+	}
+	else 
+	alert("form was submitted");
+	return true;
+	}
+</script>
+<style>
+.button{
+  border: none;
+  padding: 16px 160px;
+  text-align: center;
+  text-decoration:none;
+  display: inline-block;
+  font-size: 25px;
+  margin:4px 2px;
+  cursor: pointer;}
+  .button{background-color:#33cccc;
+  color: black;}
+  .button:hover{background-color:white;
+  color:black;
+  border:2px solid #33cccc;}
+  form{margin-top:140px;
+  margin-bottom:140px;
+  margin-left: 400px;
+  margin-right: 400px;
+  opacity:0.9;}
+  body{background-size: 1500px 1000px; background-image:url("http://bostonlandingdevelopment.com/wp-content/uploads/2016/05/BL_NBFitnessClub_Interior05_SEC04.jpg");background-attachment:fixed;}
+  center{background-color:black;
+  opacity:0.7;
+margin-left:250px;
+margin-right:250px;}
+h1.info{color:green;background-color:black;margin-left: 500px;
+  margin-right: 500px;}
+table.form{color:white;
+background-color:black;}
+.fill{background-color:black;color:white;font-size:30px;}
+.logo{ background-color:#92d954; border-radius: 75px;}
+
+</style>
+</head>
+<body> 
+<img class="logo" src="exercise-icon-16351.png" width="10%" height="10%" align="left">
+<center style="font-family:times; font-size:550%;color:#3399ff;">Power Fitness GYM and Traning</center>
+<br>
+<br>
+<a href="file:Index.html"><button class="button">About us</button></a>
+<a href="file:Event_holiday_offers.html"><button class="button">Events</button></a>
+<a href="file:Form.html"><button class="button">Form</button></a>
+<h1 align="center" class="info">sign up Now<h1>
+<form name="myform" onSubmit="return Validate()" action="http://www.WebsiteDevelopmentBook.com/FormEcho.php" method="post">
+<table class=fill>
+<tr>
+<td>First Name:</td>
+<td><input name=firstname><span id=fn></span></td>
+</tr>
+<tr>
+<td>Last Name:</td>
+<td><input name=lastname><span id=ln></span></td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>Male <input type="radio" name="gender" value="male"/>
+Female <input type="radio" name="gender" value="female"/>
+</tr>
+<tr>
+<td>Address:</td>
+<td><input name=address><span id=ad></span></td>
+</tr>
+<tr>
+<td>City:</td>
+<td><input name=city><span id=ct></span></input></td>
+</tr>
+<tr>
+<td>State:</td>
+<td><input name=state><span id=s></span></input></td>
+</tr>
+<tr>
+<td>Zip code:</td>
+<td><input name=zip><span id=z></span></input></td>
+</tr>
+<tr>
+<td>email:</td>
+<td><input name=email><span id=em></span></input></td>
+</tr>
+<tr>
+<td>Phonenumber:</td>
+<td><input name=phonenumber><span id=pn></span></input></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><input type=submit></input></td>
+</tr>
+</table>
+</form>
+</body>

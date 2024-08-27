@@ -1,0 +1,98 @@
+<html>
+<head>
+	<title>valid</title>
+	
+	<script language="javascript">
+	
+	function Validate() {
+	
+	var FLAG = 0;
+	
+	if(document.myform.firstname.value == '') {
+	FLAG = 1;
+	fn.innerHTML= '<b>First Name is Empty</b>';
+	}
+	
+	if(document.myform.lastname.value == '') {
+	FLAG = 1;
+	ln.innerHTML = '<b>Last Name is Empty</b>';
+	}
+	
+	if(document.myform.address.value == '') {
+	FLAG = 1;
+	ad.innerHTML = '<b>Address is Empty</b>';
+	}
+	
+	if(document.myform.city.value == '') {
+	FLAG = 1;
+	ct.innerHTML = '<b>City is Empty</b>';
+	}
+	
+	if(document.myform.state.value == '') {
+	FLAG = 1;
+	st.innerHTML = '<b>State is Empty</b>';
+	}
+	
+	if(document.myform.zip.value == '') {
+	FLAG = 1;
+	z.innerHTML = '<b>Zip is Empty</b>';
+	}
+	
+	if(document.myform.email.value == '') {
+	FLAG = 1;
+	em.innerHTML = '<b>Email is Empty</b>';
+	}
+	if( FLAG ) {
+	return false;
+	}
+	else
+	alert("all is well");
+	return true;
+	}
+	
+	</script>
+</head>
+
+<body>
+
+<form name="myform" onSubmit="return Validate()" action="http://www.websitedevelopmentbook.com/FormEcho.php" method="post" >
+<table align="center">
+ <tr>
+  <td>First Name:</td>
+  <td><input name=firstname><span id=fn></span></td>
+ </tr>
+ <tr>
+  <td>Last Name:</td>
+  <td><input name=lastname><span id=ln></span></td>
+ </tr>
+ <tr>
+ <td>Address:</td>
+ <td><input name=address><span id=ad></span></td>
+ </tr>
+ <tr>
+ <td>City:</td>
+ <td><input name=city><span id=ct></span></td>
+ </tr>
+ <tr>
+  <td>State:</td>
+  <td><input name=state><span id=st></span></td>
+ </tr>
+ <tr>
+  <td>Zip:</td>
+  <td><input name=zip><span id=z></span></td>
+ </tr>
+ <tr>
+  <td>Email:</td>
+  <td><input name=email><span id=em></span></td>
+ </tr>
+ <tr>
+  <td>&nbsp;</td>
+  <td><input type=submit></td>
+ </tr>
+</table>
+</form>
+
+
+
+</body>
+</html>

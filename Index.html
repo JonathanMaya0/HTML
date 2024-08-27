@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jonathan_web_About_us</title>
+<script>
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 1);
+
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+<style>
+<!--background-attachment:fixed; considerration for later if needed-->
+body{background-size: 1500px 1000px;}
+.button{
+  border: none;
+  padding: 16px 160px;
+  text-align: center;
+  text-decoration:none;
+  display: inline-block;
+  font-size: 25px;
+  margin:4px 2px;
+  cursor: pointer;}
+  .button{background-color:#33cccc;
+  color: black;}
+  .button:hover{background-color:white;
+  color:black;
+  border:2px solid #33cccc;}
+  ul{text-size:300px;color:white;align:left;}
+  center{margin-left:250px;
+margin-right:250px; opacity:0.9;} 
+  h1{background-color:black;
+  opacity:0.9;
+margin-left:500px;
+margin-right:500px;}
+body{background-image:url("https://www.skistar.com/globalassets/bilder-nya-skistar.com/experium/gym.jpg");background-size:1500px 1000px;}
+.logo{ background-color:#92d954; border-radius: 75px;}
+
+* {box-sizing: border-box}
+.mySlides1 {display: none}
+img {vertical-align: left;}
+
+
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next 
+{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover 
+	{
+  background-color: black;
+  color: #0073e6;
+  }
+ 
+ ul{background-color:#0073e6;margin-right:300px;margin-left:200px;} 
+.workout{width:100%;}
+</style>
+</head>
+<body style="background-attachment:fixed;"> 
+<img class="logo" src="exercise-icon-16351.png" width="10%" height="10%" align="left">
+<center style="font-family:times;background-color: black; font-size:550%;color:#3399ff;">Power Fitness GYM and Traning</center>
+<br>
+<br>
+<a href="file:Index.html"><button class="button">About us</button></a>
+<a href="file:Event_holiday_offers.html"><button class="button">Events</button></a>
+<a href="file:Form.html"><button class="button">Form</button></a>
+<br>
+<h1 style="font-family:times;font-size:50px;color:#8c8c8c;" align="center">About The GYM</h1>
+
+<hr>
+
+<ul>
+<li>history
+<ul>
+<li>created by the family of gym trainerd</li>
+<li>created in 2017</li>
+<li>never change name</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Our goal
+<ul>
+<li>make the place enjoyable for everyone to workout felling unwelcome </li>
+<li>train people to become strong and fit</li>
+</ul>
+</li>
+</ul>
+<br>
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <img class="workout" src="gym-workout.jpg">
+  </div>
+
+  <div class="mySlides1">
+    <img class="workout" src="workout.jpg">
+  </div>
+
+  <div class="mySlides1">
+    <img class="workout" src="gym.jpg" >
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+</body>
+</html>
